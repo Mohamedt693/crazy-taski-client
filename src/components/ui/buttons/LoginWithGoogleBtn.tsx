@@ -1,8 +1,7 @@
 
 
 function LoginWithGoogleBtn() {
-  const baseUrl = import.meta.env.VITE_BASE_URL || "https://crazy-taski-server-production.up.railway.app";
-  const googleLoginUrl = `${baseUrl}/auth/google`;
+  const googleLoginUrl = `${import.meta.env.VITE_BASE_URL}/auth/google`;
 
   return (
     <a 
