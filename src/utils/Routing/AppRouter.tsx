@@ -1,4 +1,4 @@
-import { lazy, useMemo } from "react";
+import { lazy, useEffect, useMemo } from "react";
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { withSuspense } from "./SuspenseWrapper.tsx";
 
@@ -24,8 +24,26 @@ const SparklesPage = lazy(() => import("../../pages/main/Sparkels/Sparkels.tsx")
 const Docs = lazy(() => import("../../pages/main/Docs/Docs.tsx"));
 const NotFound = lazy(() => import("../../pages/errors/NotFound.tsx"));
 
+// stores
+import useSocketStore from "../../store/useSocketStore.ts";
+import { useAuthStore } from "../../store/useAuthStore.ts";
 
 export default function AppRouter() {
+  const accessToken = useAuthStore((state) => state.accessToken);
+  const user = useAuthStore((state) => state.user);
+  const connectSocket = useSocketStore((state) => state.connectSocket);
+  const disconnectSocket = useSocketStore((state) => state.disconnectSocket);
+
+  useEffect(() => {
+    if (accessToken && user) {
+      connectSocket(accessToken);
+    }
+
+    return () => {
+      disconnectSocket();
+    };
+  }, [accessToken, user, connectSocket, disconnectSocket]);
+
   const router = useMemo(
     () =>
       createBrowserRouter([
