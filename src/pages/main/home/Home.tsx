@@ -11,11 +11,8 @@ function Home() {
   }, [fetchDashboardData]);
 
   // Loading State
-  if (isLoading && !data) {
-    return (
-      <Loader />
-    );
-  }
+  if (isLoading) return <Loader />
+
 
   return (
     <div className="h-full overflow-y-auto custom-scrollbar px-6 md:px-10 py-6">

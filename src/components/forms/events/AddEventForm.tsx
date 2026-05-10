@@ -4,7 +4,7 @@ import { CalendarPlus, Type, AlignLeft, Calendar, Clock } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from '@hookform/resolvers/zod';
 import { type EventFormData, eventSchema } from '../../../schemas/event.schema';
-// UI Components (The Clean Arsenal 🚀)
+// UI Components 
 import FormInput from '../../ui/inputs/FormInput';
 import FormTextarea from '../../ui/inputs/FormTextarea';
 import SubmitButton from '../../ui/buttons/SubmitButton';
