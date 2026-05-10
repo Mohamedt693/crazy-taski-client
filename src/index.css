@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+
+:root {
+  /* Light Mode */
+  --main-color: #ffffff;
+
+  --primary-color: #F7E2B8;
+  --primary-color-hover: #EED4A1;
+
+  --secondry-color: #FAF8F5;
+  --secondry-colo-hover: #6B9CE0;
+
+  --primary-text: #111827;
+
+  --secondry-text: #4b5563; 
+
+  --border-color: #e5e7eb;
+
+  --submitBtn-bg: #F7E2B8;
+  --submitBtn-bg-hover: #EED4A1;
+
+  --addBtn-bg: #F7E2B8;
+  --addBtn-bg-hover: #EED4A1;
+
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --select-iunput-card-bg: #F7E2B8;
+
+  --list-item-active: #ffffff;
+  --list-item-hover: rgba(255, 255, 255, 0.5);
+
+}
+
+.dark {
+  /* Dark Mode */
+  --main-color: #0b0f19; 
+
+  --primary-color: #0b0f19; 
+  --primary-color-hover: #3a2922;
+
+  --secondry-color: #111827; 
+  --secondry-colo-hover: #1e293b;
+
+  --primary-text: white;
+  --secondry-text: white;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  --submitBtn-bg: #454C59;
+  --submitBtn-bg-hover: #565E6D;
+
+  --addBtn-bg: #454C59;
+  --addBtn-bg-hover: #565E6D;
+
+  --card-bg: #454C59;
+  --input-bg: #565E6D;
+  --select-iunput-card-bg: #454C59;
+
+  --list-item-active: #454C59;
+  --list-item-hover: #565E6D;
+
+}
+
+.dark .custom-scrollbar-inner::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* Default Input Styles */
+.default-input {
+  color: #111827;
+  width: 100%;
+  background-color: #f8fafc; 
+  border-radius: 1rem; 
+  padding-top: 0.75rem;    
+  padding-bottom: 0.75rem; 
+  padding-left: 2rem;    
+  padding-right: 1rem;     
+  outline: none;
+  font-size: 0.875rem; 
+  border: 1.5px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.dark .default-input {
+  color: white;
+  background-color: #6B7382;
+}
+
+/* (Error State) */
+.default-input.input-error {
+  border-color: #fecaca; /* border-red-200 */
+  background-color: #ffffff;
+}
+
+.default-input.input-error:focus {
+  border-color: #f87171; /* border-red-400 */
+}
+
+/* (Error Message) */
+.error-message {
+  font-size: 10px;
+  color: #ef4444; /* text-red-500 */
+  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+
+/* scrollbar styles */
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: none; 
+}
+
+/* Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+
+.custom-scrollbar-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-scrollbar-inner {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 10px; 
+}
+
+.custom-scrollbar-inner:hover::-webkit-scrollbar {
+  display: block;
+  width: 4px;
+}
+
+.custom-scrollbar-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar-inner::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 9999px;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+/* toast styles */
+.Toastify__toast--success {
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.Toastify__toast--error {
+  background: #f44336; 
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.Toastify__toast--info {
+  background: #2196f3; 
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.Toastify__toast-body {
+  font-size: 14px;
+}
+
+.Toastify__progress-bar {
+  background: white; 
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+/* FullCalendar Custom Styles */
+.fc {
+  --fc-border-color: #f1f5f9;
+  --fc-today-bg-color: #eff6ff;
+  font-family: inherit;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.fc .fc-button-primary {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 12px;
+}
+
+.fc .fc-button-primary:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+.fc .fc-button-active {
+  background-color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.fc-event {
+  border-radius: 8px;
+  padding: 2px 4px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
