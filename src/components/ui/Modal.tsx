@@ -6,8 +6,8 @@ export default function ConfirmModal() {
     if (!isOpen) return null;
 
     const handleConfirm = async () => {
-        await onConfirm(); 
         onClose(); 
+        await onConfirm(); 
     };
 
     return (
