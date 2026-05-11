@@ -41,7 +41,7 @@ src/
 
 3. Environment Setup:
   Create a .env file in the root directory and add the API base URL:
-  VITE_API_URL=https://crazy-taski-client-production.up.railway.app/
+  VITE_API_URL=https://crazy-taski-client-production.up.railway.app
 
 4. Run the development server:
   npm run dev
