@@ -31,14 +31,10 @@ const AuthSuccess = () => {
     handleAuth();
   }, [searchParams, setUser, navigate]);
 
-  // return (
-  //   <div className="flex h-screen w-full flex-col items-center justify-center gap-4 bg-white">
-  //     <div className="h-12 w-12 animate-spin rounded-full border-4 border-[#7DAEF7] border-t-transparent"></div>
-  //     <p className="text-slate-500 font-medium animate-pulse">
-  //       Fetching your account information...
-  //     </p>
-  //   </div>
-  // );
+  return (
+    <div className="flex h-screen w-full flex-col items-center justify-center gap-4 bg-(--primary-color)">
+    </div>
+  );
 }
 
 export default AuthSuccess;
